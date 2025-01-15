@@ -1,3 +1,199 @@
+/* Supprime les marges et les espacements par défaut du body */
 body {
-    background-color: skyblue;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Organise le contenu en colonnes */
+    min-height: 100vh;
+}
+
+/* Style du navbar */
+#navbar {
+    width: 100%;
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+    padding: 30px 0px 30px 0px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd; 
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    max-height: 40px; 
+}
+
+
+#indice {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+
+#indice a {
+    text-decoration: none;
+    color: #333; 
+    font-weight: bold; 
+    font-size: 16px; 
+    transition: color 0.3s ease; 
+}
+
+
+#indice a:hover {
+    color: #007bff;
+}
+
+/* Style du corp de l'appli */
+
+#main-content {
+    flex: 1; /* Permet au contenu principal de s'étirer pour occuper l'espace disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrer verticalement le contenu si nécessaire */
+    align-items: center; /* Centrer horizontalement le contenu si nécessaire */
+}
+
+a{
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+a::before , a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+a::before{
+    background-color: rgb(87, 87, 255);
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transition: transform .3s cubic-bezier(0.76, 0);
+}
+
+a::after{
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: rgb(87, 87, 255);
+}
+
+a:hover::after{
+    transform: translate3d(0,0,0);
+}
+
+a span{
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.75, 0 ,0.24,1);
+}
+
+a:hover span{
+    transform: translate3d(-200%, 0, 0);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+#form {
+    flex: 1; /* Permet au contenu principal de s'étirer pour occuper l'espace disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrer verticalement le contenu si nécessaire */
+    align-items: center; /* Centrer horizontalement le contenu si nécessaire */
+    padding: 5% 5% 5% 5%;
+    max-width: 400px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+#form form {
+    width: 100%;
+}
+
+#form ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#form li {
+    margin-bottom: 15px;
+}
+
+#form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: center;
+}
+
+#form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+#form button {
+    width: 100%;
+    padding: 10px;
+    margin: 3% 0% 0% 0%;
+    background-color: rgb(87, 87, 255);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#form button:hover {
+    background-color: rgb(67, 67, 200);
+}
+
+.button {
+    width: 100%;
+    padding: 3% 0% 3% 0%;
+    margin: 10% 0% 0% 0%;
+    background-color: rgb(87, 87, 255);
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: rgb(67, 67, 200);
+}
+/* Style du footer */
+
+#footer{
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
 }

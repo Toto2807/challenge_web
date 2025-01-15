@@ -1,0 +1,48 @@
+{% extends "base.html.twig" %}
+{% block body %}
+    
+    {# Haut de page #}
+    <div id="navbar">
+        <article id="logo">
+            <img src="votre-logo.png" alt="Logo" />
+        </article>
+        <article id="indice">
+            <a href="/">Accueil</a>
+            <a href="./creation">Inscrption</a>
+            <a href="./connexion">Connexion / Déconnexion</a>
+        </article>
+    </div>
+    
+    
+    {# Formulaire #}
+    <div id="form">
+        <form action="FormController.php" method="POST">
+            <ul>
+                <li>
+                    <label for="name">Prénom : </label>
+                    <input type="text" id="name" name="name">
+                </li>
+                <li>
+                    <label for="firstname">Nom : </label>
+                    <input type="text" id="firstname" name="firstname">
+                </li>
+                <li>
+                    <label for="email">Email : </label>
+                    <input type="email" id="email" name="email">
+                </li>
+                <li>
+                    <label for="password">Mot de passe : </label>
+                    <input type="password" id="password" name="password">
+                </li>
+            </ul>
+            <button type="submit">Création du compte</button>
+            {# redirection avec php #}
+        </form>
+    </div>
+
+
+    {# Pied de page #}
+    <div id="footer">
+        <p>&copy Tous droit réservé - Théo / Théo / Mabrouk / Ilian</p>
+    </div>
+{% endblock %}

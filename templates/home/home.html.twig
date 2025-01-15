@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+    <div id="navbar">
+        <article id="logo">
+            <img src="votre-logo.png" alt="Logo" />
+        </article>
+        <article id="indice">
+            <a href="/">Accueil</a>
+            <a href="./creation">Inscription</a>
+            <a href="./connexion">Connexion / Déconnexion</a>
+        </article>
+    </div>
+
+    <div id="main-content">
+        <!-- Ajoutez ici le contenu de la page -->
+        <p>Bienvenue dans votre banque</p>
+        <a href="/connexion" id="style_2" data-replace="Connexion">
+            <span>Connexion</span>
+        </a>
+        <a href="/creation" id="style_2" data-replace="Création">
+            <span>Création</span>
+        </a>
+    </div>
+
+    <div id="footer">
+        <p>&copy Tous droit réservé - Théo / Théo / Mabrouk / Ilian</p>
+    </div>
+{% endblock %}
