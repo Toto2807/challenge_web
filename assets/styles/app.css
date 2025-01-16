@@ -188,6 +188,38 @@ a{
 .button:hover {
     background-color: rgb(67, 67, 200);
 }
+
+
+#compte{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 75%;
+    margin-left: 12.5%;
+}
+
+#compte1, #compte_epargne{
+    align-items: center;
+    text-align: center;
+    margin: 10% auto;
+    padding: 5% 0% 5% 0%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+#compte h2{
+    text-decoration: underline;
+}
+
+#ajout_compte{
+    margin: 0% 0% 3% 0%;
+    padding: 2% 3% 2% 3%;
+    border-radius: 8px;
+}
+
+
 /* Style du footer */
 
 #footer{
